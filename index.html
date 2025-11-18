@@ -1,417 +1,1732 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syed Shaon - AI Consultant & Business Development Expert</title>
-    <meta name="description" content="Professional AI consulting services by Syed Shaon. Specializing in business development, AI migration, and proprietary AI solutions for enterprises.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syed Shaon - AI Consultant & Business Development Expert</title>
+  <meta name="description" content="Professional AI consulting services by Syed Shaon. Specializing in business development, AI migration, and proprietary AI solutions for enterprises." />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Calendly CSS (kept external) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+  <!-- Inlined CSS (full) -->
+  <style>
+    /* ---------- User-provided CSS (with small additions for image) ---------- */
+
+    /* CSS Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* CSS Variables */
+    :root {
+        --primary-color: #3B82F6;
+        --secondary-color: #1E40AF;
+        --accent-color: #F59E0B;
+        --text-primary: #1F2937;
+        --text-secondary: #6B7280;
+        --text-light: #9CA3AF;
+        --bg-primary: #FFFFFF;
+        --bg-secondary: #F9FAFB;
+        --bg-dark: #111827;
+        --border-color: #E5E7EB;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    }
+
+    /* Utility Classes */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .gradient-text {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Navigation Styles */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+
+    .nav-logo h2 {
+        color: var(--text-primary);
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .nav-logo span {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-primary);
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+
+    .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-primary);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--text-primary);
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        padding-top: 70px;
+    }
+
+    .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .btn-primary {
+        background: var(--gradient-primary);
+        color: white;
+        box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+        background: white;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
+
+    .btn-secondary:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-card {
+        background: white;
+        padding: 3rem 2rem;
+        border-radius: 20px;
+        box-shadow: var(--shadow-xl);
+        text-align: center;
+        transform: rotate(5deg);
+        transition: transform 0.3s ease;
+    }
+
+    .hero-card:hover {
+        transform: rotate(0deg) translateY(-10px);
+    }
+
+    .hero-card i {
+        font-size: 4rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .hero-card h3 {
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-card p {
+        color: var(--text-secondary);
+    }
+
+    /* Section Styles */
+    section {
+        padding: 6rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .section-header p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* About Section */
+    .about {
+        background: var(--bg-secondary);
+    }
+
+    /* === NOTE: we'll override about-content below to ensure image column shows === */
+
+    .about-text h3 {
+        font-size: 1.75rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .about-text h3:first-child {
+        margin-top: 0;
+    }
+
+    .about-text p {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .credentials {
+        margin: 2rem 0;
+    }
+
+    .credential-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .credential-item i {
+        font-size: 2rem;
+        color: var(--primary-color);
+        min-width: 40px;
+    }
+
+    .credential-item h4 {
+        color: var(--text-primary);
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .credential-item p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .about-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-item p {
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+
+    /* Services Section */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+        border-top: 4px solid transparent;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+        border-top-color: var(--primary-color);
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-icon i {
+        font-size: 1.75rem;
+        color: white;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .service-card p {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .service-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .service-card li {
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    .service-card li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+        background: var(--bg-secondary);
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .portfolio-item {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    .portfolio-content {
+        padding: 2rem;
+    }
+
+    .portfolio-content h3 {
+        font-size: 1.25rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-content p {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .portfolio-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .portfolio-tags span {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.75rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-item i {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        min-width: 30px;
+    }
+
+    .contact-item h4 {
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-item p {
+        color: var(--text-secondary);
+        margin: 0;
+    }
+
+    .consultation-info {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 2rem;
+        border-radius: 12px;
+        margin-top: 2rem;
+    }
+
+    .consultation-info h4 {
+        margin-bottom: 1rem;
+    }
+
+    .consultation-info p {
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    .contact-form {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        color: var(--text-primary);
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    /* Footer */
+    .footer {
+        background: var(--bg-dark);
+        color: white;
+        padding: 4rem 0 2rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .footer-section p {
+        color: #9CA3AF;
+        line-height: 1.6;
+    }
+
+    .footer-section ul {
+        list-style: none;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section ul li a {
+        color: #9CA3AF;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+        color: var(--primary-color);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #374151;
+        padding-top: 2rem;
+        text-align: center;
+        color: #9CA3AF;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            flex-direction: column;
+            background-color: white;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: var(--shadow-md);
+            padding: 2rem 0;
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .about-stats {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .portfolio-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+        }
+
+        .about-stats {
+            grid-template-columns: 1fr;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    /* Animation Classes */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Smooth Scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Calendly Button Styles */
+    .calendly-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .calendly-button i {
+        font-size: 1.1rem;
+    }
+
+    .btn-primary .calendly-button,
+    .btn-primary.calendly-button {
+        background: var(--gradient-primary);
+    }
+
+    /* Contact Links Hover Effect */
+    .contact-item a:hover {
+        text-decoration: underline;
+    }
+
+    /* Calendly Popup Customization */
+    .calendly-overlay {
+        z-index: 9999 !important;
+    }
+
+    .calendly-popup {
+        z-index: 10000 !important;
+    }
+
+    /* ---------- Added / Overriding styles for About image & layout ---------- */
+
+    /* Profile image column and figure styles */
+    .about-image-col {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .profile-figure {
+      width: 100%;
+      max-width: 420px; /* control image size */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .profile-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .profile-figure img:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .profile-figure figcaption {
+      margin-top: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Make sure about-content keeps 2-column layout on desktop, single on small screens */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr; /* left image column, right text column */
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-image-col {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* small helpers to ensure nav active styles */
+    .nav-link.active {
+      color: var(--primary-color);
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Syed Shaon</h2>
-                <span>AI Consultant</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container container">
+      <div class="nav-logo">
+        <h2>Syed Shaon</h2>
+        <span>AI Consultant</span>
+      </div>
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+        <li role="none"><a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="hamburger" aria-hidden="true" aria-label="Open menu" title="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" aria-labelledby="home-heading">
+    <div class="hero-container container">
+      <div class="hero-content">
+        <h1 id="home-heading">Transforming Businesses with <span class="gradient-text">Artificial Intelligence</span></h1>
+        <p class="hero-description">Expert AI consultant helping enterprises leverage cutting-edge technology for business growth, process optimization, and digital transformation.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary calendly-button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/britsyncuk/discovery-call'});return false;">
+            <i class="far fa-calendar-alt"></i> Book Discovery Call
+          </button>
+          <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Transforming Businesses with <span class="gradient-text">Artificial Intelligence</span></h1>
-                <p class="hero-description">Expert AI consultant helping enterprises leverage cutting-edge technology for business growth, process optimization, and digital transformation.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Consultation</a>
-                    <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>AI Solutions</h3>
-                    <p>Custom AI tools and automation</p>
-                </div>
-            </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-card" aria-hidden="true">
+          <i class="fas fa-robot"></i>
+          <h3>AI Solutions</h3>
+          <p>Custom AI tools and automation</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Syed Shaon</h2>
-                <p>Experienced AI consultant and entrepreneur based in the UK</p>
-            </div>
+  <!-- About Section -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="about-heading">About Syed Shaon</h2>
+        <p>Experienced AI consultant and entrepreneur based in the UK</p>
+      </div>
 
-            <!-- NEW: Portrait (responsive + lazy) -->
-            <!-- Place your image at: /images/syed-shaon.jpg -->
-            <figure class="profile-figure fade-in">
-                <img
-                    src="images/syed-shaon.jpg"
-                    alt="Syed Shaon — AI consultant at his desk"
-                    loading="lazy"
-                    decoding="async"
-                    width="731"
-                    height="872"
-                />
-                <figcaption>AI Consultant & Business Development Expert</figcaption>
-            </figure>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Professional Background</h3>
-                    <p>With a strong foundation in Electrical Engineering and an MBA in Project Management, I bring a unique blend of technical expertise and business acumen to the AI consulting space.</p>
-
-                    <div class="credentials">
-                        <div class="credential-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Bachelor's in Electrical Engineering</h4>
-                                <p>Strong technical foundation in systems and technology</p>
-                            </div>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <div>
-                                <h4>MBA in Project Management</h4>
-                                <p>Business strategy and project execution expertise</p>
-                            </div>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Based in the UK</h4>
-                                <p>Serving clients across Europe and globally</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Entrepreneurial Journey</h3>
-                    <p>Currently running 3 successful startups and have developed several proprietary AI tools for enterprise clients. My expertise spans across business development, AI implementation, and digital migration strategies.</p>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>3+</h3>
-                        <p>Active Startups</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>50+</h3>
-                        <p>AI Projects Delivered</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>15+</h3>
-                        <p>Proprietary Tools</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100+</h3>
-                        <p>Satisfied Clients</p>
-                    </div>
-                </div>
-            </div>
+      <!-- ABOUT CONTENT: image + text arranged in grid -->
+      <div class="about-content">
+        <!-- LEFT COLUMN: profile image -->
+        <div class="about-image-col">
+          <figure class="profile-figure fade-in">
+            <img
+              src="images/syed-shaon.jpg"
+              alt="Syed Shaon — AI consultant at his desk"
+              loading="lazy"
+              decoding="async"
+              width="731"
+              height="872"
+              onerror="this.onerror=null; this.src='https://picsum.photos/600/800?grayscale'; console.error('Profile image failed to load — check images/syed-shaon.jpg');"
+            />
+            <figcaption>AI Consultant & Business Development Expert</figcaption>
+          </figure>
         </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Services</h2>
-                <p>Comprehensive AI consulting and business development solutions</p>
+        <!-- RIGHT COLUMN: text & stats -->
+        <div>
+          <div class="about-text">
+            <h3>Professional Background</h3>
+            <p>With a strong foundation in Electrical Engineering and an MBA in Project Management, I bring a unique blend of technical expertise and business acumen to the AI consulting space.</p>
+
+            <div class="credentials">
+              <div class="credential-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <h4>Bachelor's in Electrical Engineering</h4>
+                  <p>Strong technical foundation in systems and technology</p>
+                </div>
+              </div>
+              <div class="credential-item">
+                <i class="fas fa-project-diagram"></i>
+                <div>
+                  <h4>MBA in Project Management</h4>
+                  <p>Business strategy and project execution expertise</p>
+                </div>
+              </div>
+              <div class="credential-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Based in the UK</h4>
+                  <p>Serving clients across Europe and globally</p>
+                </div>
+              </div>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI Strategy Consulting</h3>
-                    <p>Develop comprehensive AI strategies tailored to your business objectives and industry requirements.</p>
-                    <ul>
-                        <li>AI readiness assessment</li>
-                        <li>Technology roadmap planning</li>
-                        <li>ROI analysis and projections</li>
-                    </ul>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Custom AI Tool Development</h3>
-                    <p>Build proprietary AI solutions designed specifically for your business processes and requirements.</p>
-                    <ul>
-                        <li>Machine learning models</li>
-                        <li>Automation workflows</li>
-                        <li>Data analytics platforms</li>
-                    </ul>
-                </div>
+            <h3>Entrepreneurial Journey</h3>
+            <p>Currently running 3 successful startups and have developed several proprietary AI tools for enterprise clients. My expertise spans across business development, AI implementation, and digital migration strategies.</p>
+          </div>
 
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Business Development</h3>
-                    <p>Accelerate your business growth with strategic planning and market expansion strategies.</p>
-                    <ul>
-                        <li>Market analysis and positioning</li>
-                        <li>Growth strategy development</li>
-                        <li>Partnership facilitation</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
-                    <h3>Digital Migration Support</h3>
-                    <p>Seamlessly transition your legacy systems to modern AI-powered solutions with minimal disruption.</p>
-                    <ul>
-                        <li>Legacy system assessment</li>
-                        <li>Migration planning and execution</li>
-                        <li>Staff training and support</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>AI Implementation</h3>
-                    <p>End-to-end AI solution implementation with ongoing support and optimization.</p>
-                    <ul>
-                        <li>Solution architecture design</li>
-                        <li>Integration and deployment</li>
-                        <li>Performance monitoring</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-users"></i></div>
-                    <h3>Team Training & Workshops</h3>
-                    <p>Empower your team with AI knowledge and skills through customized training programs.</p>
-                    <ul>
-                        <li>AI literacy workshops</li>
-                        <li>Technical skill development</li>
-                        <li>Change management support</li>
-                    </ul>
-                </div>
+          <div class="about-stats" style="margin-top: 2rem;">
+            <div class="stat-item">
+              <h3>3+</h3>
+              <p>Active Startups</p>
             </div>
+            <div class="stat-item">
+              <h3>50+</h3>
+              <p>AI Projects Delivered</p>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Proprietary Tools</p>
+            </div>
+            <div class="stat-item">
+              <h3>100+</h3>
+              <p>Satisfied Clients</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Portfolio</h2>
-                <p>Successful AI implementations and business transformations</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Startup #1: FinTech AI Solutions</h3>
-                        <p>Developed proprietary AI tools for financial risk assessment and automated decision-making systems.</p>
-                        <div class="portfolio-tags">
-                            <span>Machine Learning</span>
-                            <span>Risk Assessment</span>
-                            <span>Automation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Startup #2: Healthcare Analytics Platform</h3>
-                        <p>Created AI-powered healthcare analytics tools for patient data analysis and predictive healthcare outcomes.</p>
-                        <div class="portfolio-tags">
-                            <span>Healthcare AI</span>
-                            <span>Predictive Analytics</span>
-                            <span>Data Processing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Startup #3: E-commerce Optimization</h3>
-                        <p>Built AI tools for inventory management, demand forecasting, and personalized customer experiences.</p>
-                        <div class="portfolio-tags">
-                            <span>E-commerce</span>
-                            <span>Demand Forecasting</span>
-                            <span>Personalization</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Enterprise Migration Project</h3>
-                        <p>Led digital transformation for a Fortune 500 company, migrating legacy systems to AI-powered solutions.</p>
-                        <div class="portfolio-tags">
-                            <span>Digital Transformation</span>
-                            <span>Enterprise Solutions</span>
-                            <span>Legacy Migration</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>Custom NLP Tool Development</h3>
-                        <p>Developed proprietary natural language processing tools for document analysis and automated reporting.</p>
-                        <div class="portfolio-tags">
-                            <span>NLP</span>
-                            <span>Document Analysis</span>
-                            <span>Automation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-content">
-                        <h3>AI Strategy Consulting</h3>
-                        <p>Provided comprehensive AI strategy for multiple SMEs, resulting in 40% operational efficiency improvements.</p>
-                        <div class="portfolio-tags">
-                            <span>Strategy Consulting</span>
-                            <span>SME Solutions</span>
-                            <span>Efficiency Optimization</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Services</h2>
+        <p>Comprehensive AI consulting and business development solutions</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI Strategy Consulting</h3>
+          <p>Develop comprehensive AI strategies tailored to your business objectives and industry requirements.</p>
+          <ul>
+            <li>AI readiness assessment</li>
+            <li>Technology roadmap planning</li>
+            <li>ROI analysis and projections</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to transform your business with AI? Let's discuss your project.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>United Kingdom</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>syed.shaon@aicosnult.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-linkedin"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <p>Connect on LinkedIn</p>
-                        </div>
-                    </div>
-
-                    <div class="consultation-info">
-                        <h4>Free Consultation Available</h4>
-                        <p>Book a 30-minute consultation to discuss your AI needs and explore how we can help transform your business.</p>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company" />
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Interest</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="ai-strategy">AI Strategy Consulting</option>
-                                <option value="custom-ai">Custom AI Tool Development</option>
-                                <option value="business-dev">Business Development</option>
-                                <option value="migration">Digital Migration Support</option>
-                                <option value="implementation">AI Implementation</option>
-                                <option value="training">Team Training & Workshops</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cogs"></i></div>
+          <h3>Custom AI Tool Development</h3>
+          <p>Build proprietary AI solutions designed specifically for your business processes and requirements.</p>
+          <ul>
+            <li>Machine learning models</li>
+            <li>Automation workflows</li>
+            <li>Data analytics platforms</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Syed Shaon</h3>
-                    <p>AI Consultant & Business Development Expert</p>
-                    <p>Transforming businesses through intelligent automation and strategic AI implementation.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">AI Strategy Consulting</a></li>
-                        <li><a href="#services">Custom AI Development</a></li>
-                        <li><a href="#services">Business Development</a></li>
-                        <li><a href="#services">Digital Migration</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Portfolio</h4>
-                    <ul>
-                        <li><a href="#portfolio">Startup Projects</a></li>
-                        <li><a href="#portfolio">Enterprise Solutions</a></li>
-                        <li><a href="#portfolio">Proprietary Tools</a></li>
-                        <li><a href="#portfolio">Case Studies</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Syed Shaon. All rights reserved.</p>
-            </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Business Development</h3>
+          <p>Accelerate your business growth with strategic planning and market expansion strategies.</p>
+          <ul>
+            <li>Market analysis and positioning</li>
+            <li>Growth strategy development</li>
+            <li>Partnership facilitation</li>
+          </ul>
         </div>
-    </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3>Digital Migration Support</h3>
+          <p>Seamlessly transition your legacy systems to modern AI-powered solutions with minimal disruption.</p>
+          <ul>
+            <li>Legacy system assessment</li>
+            <li>Migration planning and execution</li>
+            <li>Staff training and support</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>AI Implementation</h3>
+          <p>End-to-end AI solution implementation with ongoing support and optimization.</p>
+          <ul>
+            <li>Solution architecture design</li>
+            <li>Integration and deployment</li>
+            <li>Performance monitoring</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Team Training & Workshops</h3>
+          <p>Empower your team with AI knowledge and skills through customized training programs.</p>
+          <ul>
+            <li>AI literacy workshops</li>
+            <li>Technical skill development</li>
+            <li>Change management support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Portfolio</h2>
+        <p>Successful AI implementations and business transformations</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3>Startup #1: FinTech AI Solutions</h3>
+            <p>Developed proprietary AI tools for financial risk assessment and automated decision-making systems.</p>
+            <div class="portfolio-tags">
+              <span>Machine Learning</span>
+              <span>Risk Assessment</span>
+              <span>Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3>Startup #2: Healthcare Analytics Platform</h3>
+            <p>Created AI-powered healthcare analytics tools for patient data analysis and predictive healthcare outcomes.</p>
+            <div class="portfolio-tags">
+              <span>Healthcare AI</span>
+              <span>Predictive Analytics</span>
+              <span>Data Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3>Startup #3: E-commerce Optimization</h3>
+            <p>Built AI tools for inventory management, demand forecasting, and personalized customer experiences.</p>
+            <div class="portfolio-tags">
+              <span>E-commerce</span>
+              <span>Demand Forecasting</span>
+              <span>Personalization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3>Enterprise Migration Project</h3>
+            <p>Led digital transformation for a Fortune 500 company, migrating legacy systems to AI-powered solutions.</p>
+            <div class="portfolio-tags">
+              <span>Digital Transformation</span>
+              <span>Enterprise Solutions</span>
+              <span>Legacy Migration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3>Custom NLP Tool Development</h3>
+            <p>Developed proprietary natural language processing tools for document analysis and automated reporting.</p>
+            <div class="portfolio-tags">
+              <span>NLP</span>
+              <span>Document Analysis</span>
+              <span>Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3>AI Strategy Consulting</h3>
+            <p>Provided comprehensive AI strategy for multiple SMEs, resulting in 40% operational efficiency improvements.</p>
+            <div class="portfolio-tags">
+              <span>Strategy Consulting</span>
+              <span>SME Solutions</span>
+              <span>Efficiency Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Ready to transform your business with AI? Let's discuss your project.</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Wales, United Kingdom</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:syedislam431@gmail.com" style="color: inherit; text-decoration: none;">syedislam431@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+4407735856319" style="color: inherit; text-decoration: none;">+4407735856319</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://www.linkedin.com/in/syed-islam-317bb122a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #3B82F6; text-decoration: none;">linkedin.com/in/syedshaon</a></p>
+            </div>
+          </div>
+
+          <div class="consultation-info">
+            <h4>Free Consultation Available</h4>
+            <p>Book a 30-minute consultation to discuss your AI needs and explore how we can help transform your business.</p>
+            <button class="btn btn-primary calendly-button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/britsyncuk/discovery-call'});return false;" style="margin-top: 1rem; width: 100%;">
+              <i class="far fa-calendar-alt"></i> Schedule a Discovery Call
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="ai-strategy">AI Strategy Consulting</option>
+                <option value="custom-ai">Custom AI Tool Development</option>
+                <option value="business-dev">Business Development</option>
+                <option value="migration">Digital Migration Support</option>
+                <option value="implementation">AI Implementation</option>
+                <option value="training">Team Training & Workshops</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Syed Shaon</h3>
+        <p>AI Consultant & Business Development Expert</p>
+        <p>Transforming businesses through intelligent automation and strategic AI implementation.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AI Strategy Consulting</a></li>
+          <li><a href="#services">Custom AI Development</a></li>
+          <li><a href="#services">Business Development</a></li>
+          <li><a href="#services">Digital Migration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Portfolio</h4>
+        <ul>
+          <li><a href="#portfolio">Startup Projects</a></li>
+          <li><a href="#portfolio">Enterprise Solutions</a></li>
+          <li><a href="#portfolio">Proprietary Tools</a></li>
+          <li><a href="#portfolio">Case Studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/syed-islam-317bb122a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/share/19YD558LTH/" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/syed-siful-islam" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Syed Shaon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Calendly Widget Script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- Inlined JavaScript (full main.js content) -->
+  <script>
+    // Main JavaScript functionality for Syed Shaon AI Consultant website
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // If this is an in-page link, perform smooth scroll (we also handle nav closing above)
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 70;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        const navbar = document.querySelector('.navbar');
+
+        function handleNavbarScroll() {
+            if (!navbar) return;
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        }
+
+        window.addEventListener('scroll', handleNavbarScroll);
+
+        // Active navigation link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function highlightNavLink() {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionHeight = section.clientHeight;
+
+                if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavLink);
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Add fade-in animation to various elements
+        const animatedElements = document.querySelectorAll(`
+            .service-card,
+            .portfolio-item,
+            .stat-item,
+            .credential-item,
+            .about-text,
+            .contact-info,
+            .contact-form,
+            .profile-figure
+        `);
+
+        animatedElements.forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+
+                // Show loading state
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Simulate form submission (replace with actual API call)
+                setTimeout(() => {
+                    // Reset form
+                    this.reset();
+
+                    // Show success message
+                    showNotification('Thank you for your message! I will get back to you within 24 hours.', 'success');
+
+                    // Reset button
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+
+                    // Log form data (for development purposes)
+                    console.log('Contact form submission:', formObject);
+
+                }, 2000);
+            });
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                    <button class="notification-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+
+            // Add styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${type === 'success' ? '#10B981' : '#3B82F6'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                z-index: 9999;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+                max-width: 400px;
+            `;
+
+            // Add notification styles
+            const notificationContent = notification.querySelector('.notification-content');
+            notificationContent.style.cssText = `
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+            `;
+
+            const closeButton = notification.querySelector('.notification-close');
+            closeButton.style.cssText = `
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                padding: 0;
+                margin-left: auto;
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+            `;
+
+            closeButton.addEventListener('click', () => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => notification.remove(), 300);
+            });
+
+            // Add to page
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.transform = 'translateX(400px)';
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 5000);
+        }
+
+        // Counter animation for statistics
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-item h3');
+
+            counters.forEach(counter => {
+                // remove + before parse
+                const target = parseInt(counter.textContent.replace('+', '')) || 0;
+                const increment = target / 50 || 1;
+                let current = 0;
+
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current) + '+';
+                        setTimeout(updateCounter, 40);
+                    } else {
+                        counter.textContent = target + '+';
+                    }
+                };
+
+                // Start animation when element is visible
+                const counterObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                counterObserver.observe(counter.parentElement);
+            });
+        }
+
+        animateCounters();
+
+        // Typing effect for hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+
+        // Enhanced hero animations
+        function initHeroAnimations() {
+            const heroTitle = document.querySelector('.hero-content h1');
+            const heroDescription = document.querySelector('.hero-description');
+            const heroButtons = document.querySelector('.hero-buttons');
+            const heroCard = document.querySelector('.hero-card');
+
+            // Animate elements with delays
+            setTimeout(() => {
+                if (heroDescription) {
+                    heroDescription.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            }, 500);
+
+            setTimeout(() => {
+                if (heroButtons) {
+                    heroButtons.style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            }, 800);
+
+            setTimeout(() => {
+                if (heroCard) {
+                    heroCard.style.animation = 'fadeInRight 1s ease forwards';
+                }
+            }, 1000);
+        }
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .hero-description,
+            .hero-buttons {
+                opacity: 0;
+            }
+
+            .nav-link.active {
+                color: var(--primary-color);
+            }
+
+            .nav-link.active::after {
+                width: 100%;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize hero animations
+        initHeroAnimations();
+
+        // Parallax effect for hero section
+        function handleParallax() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroCard = document.querySelector('.hero-card');
+
+            if (hero && heroCard) {
+                const rate = scrolled * -0.5;
+                heroCard.style.transform = `translateY(${rate}px) rotate(5deg)`;
+            }
+        }
+
+        // Throttle parallax for performance
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(handleParallax);
+                ticking = true;
+                setTimeout(() => { ticking = false; }, 16);
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+
+        // Service cards hover effects
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Portfolio items hover effects
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        portfolioItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Loading screen (optional)
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // Add custom cursor for interactive elements (optional enhancement)
+        const interactiveElements = document.querySelectorAll('a, button, .service-card, .portfolio-item');
+
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                document.body.style.cursor = 'pointer';
+            });
+
+            element.addEventListener('mouseleave', function() {
+                document.body.style.cursor = 'default';
+            });
+        });
+
+        console.log('🚀 Syed Shaon AI Consultant website loaded successfully!');
+    });
+  </script>
 </body>
 </html>
